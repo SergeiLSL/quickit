@@ -42,7 +42,7 @@ input {
 .title {
    font-weight: 900;
    font-size: rem(46);
-   @include adaptiveValue("font-size", 46, 32);
+   @include adaptiveValue("font-size", 46, 32, 2, 768, 375);
    line-height: 119.56%; /* 55/46 */
    color: #FFFFFF;
 }

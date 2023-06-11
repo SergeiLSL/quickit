@@ -17,6 +17,9 @@
    // .dark-section__fuature
    &__fuature {
    }
+   // .dark-section__layouts
+   &__layouts {
+   }
 }
 
 //==== finish ================================================================================================
@@ -94,9 +97,10 @@
    // .fuature__image-ibg
    &__image-ibg {
       padding-top: 34.5%;
-      // padding-bottom: 44.78%;
       padding-bottom: 34.5%;
       position: relative;
+      filter: drop-shadow(-16px -16px 0px rgba(0, 0, 0, 0.5)) drop-shadow(20px 20px 100px rgba(0, 0, 0, 0.4))
+         drop-shadow(16px 16px 0px rgba(0, 0, 0, 0.5));
       img {
          position: absolute;
          width: 100%;
@@ -107,9 +111,69 @@
       }
    }
 }
-
 //==== finish fuature ================================================================================================
 //==== start  ================================================================================================
+.layouts {
+   background-color: #262f5c;
+   @include adaptiveValue("padding-top", 70, 35);
+   @include adaptiveValue("padding-bottom", 70, 35);
+   // .layouts__container
+   &__container {
+   }
+   // .layouts__inner
+   &__inner {
+   }
+   // .layouts__row
+   &__row {
+      display: flex;
+      align-items: center;
+      @media (max-width:$mobile){
+         flex-direction: column; 
+      }
+   }
+   // .layouts__content
+   &__content {
+      flex: 0 1 50%;
+      @include adaptiveValue("padding-top", 57, 30);
+      @include adaptiveValue("padding-bottom", 57, 30);
+      @media (max-width:$mobile){
+         max-width: rem(570);
+         text-align: center;
+         &:not(:last-child) {margin-bottom: rem(30);}
+      }
+   }
+   // .layouts__subtitle
+   &__subtitle {
+      font-weight: 900;
+      font-size: rem(12);
+      line-height: 133%; /* 16/12 */
+      color: #ffffff;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      &:not(:last-child) {margin-bottom: rem(25);}
+   }
+   // .layouts__title
+   &__title {
+      &:not(:last-child) {margin-bottom: rem(25);}
+      span {
+         color: rgba(241, 32, 82, 1);
+      }
+      @media (max-width:$mobile){
+         font-size: rem(46);
+      }
+   }
+   // .layouts__text
+   &__text {
+      font-size: rem(20);
+      line-height: 150%; /* 30/20 */
+      color: #ffffff;
+   }
+   // .layouts__image
+   &__image {
+      flex: 0 1 50%;
+      text-align: right;
+   }
+}
 
 //==== finish ================================================================================================
 //====================================================================================================
