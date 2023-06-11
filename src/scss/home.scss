@@ -1,16 +1,81 @@
 //====================================================================================================
 .page {
+   // .page__dark-section
+   &__dark-section {
+   }
    // .page__resources
    &__resources {
    }
 }
 //====================================================================================================
 //==== start  ================================================================================================
+.dark-section {
+   background-color: #1f2025;
+   // .dark-section__customers
+   &__customers {
+   }
+}
 
 //==== finish ================================================================================================
-//==== start  ================================================================================================
-
-//==== finish ================================================================================================
+//==== start customers ================================================================================================
+.customers {
+   // background-color: #1F2025;
+   @include adaptiveValue("padding-top", 70, 35);
+   @include adaptiveValue("padding-bottom", 70, 35);
+   // .customers__container
+   &__container {
+   }
+   // .customers__inner
+   &__inner {
+   }
+   // .customers__title
+   &__title {
+      font-weight: 700;
+      font-size: rem(20);
+      line-height: 150%; /* 30/20 */
+      color: #ffffff;
+      &:not(:last-child) {
+         margin-bottom: rem(40);
+      }
+   }
+   // .customers__rows
+   &__rows {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(30);
+      @media (max-width: $mobile) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+   // .customers__column
+   &__column {
+   }
+   // .customers__item
+   &__item {
+      background: rgba(255, 255, 255, 0.02);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: rem(25) 0;
+   }
+   // .customers__image
+   &__image {
+      width: rem(52);
+      height: rem(52);
+      img {
+         width: rem(39);
+         height: rem(39);
+      }
+   }
+   // .customers__name
+   &__name {
+      font-weight: 700;
+      font-size: rem(16);
+      line-height: 150%; /* 24/16 */
+      color: #ffffff;
+   }
+}
+//==== finish customers ================================================================================================
 //====================================================================================================
 //==== start  ================================================================================================
 
@@ -38,19 +103,19 @@
    position: relative;
    background: #fef4fe;
    padding: rem(148) 0 rem(130) 0;
-   @media (max-width:$mobile){
-      padding: rem(128) 0 rem(60) 0;  
+   @media (max-width: $mobile) {
+      padding: rem(128) 0 rem(60) 0;
    }
-   @media (max-width:$mobileSmall){
-      padding: rem(80) 0 rem(20) 0;     
+   @media (max-width: $mobileSmall) {
+      padding: rem(80) 0 rem(20) 0;
    }
    &__inner {
       padding: rem(70) 0;
-      @media (max-width:$mobile){
-         padding: rem(60) 0; 
+      @media (max-width: $mobile) {
+         padding: rem(60) 0;
       }
-      @media (max-width:$mobileSmall){
-         padding: rem(30) 0 rem(20) 0;     
+      @media (max-width: $mobileSmall) {
+         padding: rem(30) 0 rem(20) 0;
       }
    }
    // .resources-page__container
@@ -64,11 +129,11 @@
       &:not(:last-child) {
          margin-bottom: rem(80);
       }
-      @media (max-width:$mobile){
+      @media (max-width: $mobile) {
          display: block;
          &:not(:last-child) {
             margin-bottom: rem(35);
-         }  
+         }
       }
    }
    // .resources-page__title
@@ -203,5 +268,3 @@
 .resources-page .swiper-pagination-bullet-active {
    box-shadow: rem(5) rem(5) rem(5) #dedede;
 }
-
-

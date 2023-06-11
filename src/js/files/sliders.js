@@ -27,9 +27,9 @@ import "../../scss/libs/swiper.scss";
 function initSliders() {
    // Список слайдерів
    // Перевіряємо, чи є слайдер на сторінці
-   if (document.querySelector('.swiper')) { // Вказуємо склас потрібного слайдера
+   if (document.querySelector('.resources-page__slider')) { // Вказуємо склас потрібного слайдера
       // Створюємо слайдер
-      new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
+      new Swiper('.resources-page__slider', { // Вказуємо склас потрібного слайдера
          // Підключаємо модулі слайдера
          // для конкретного випадку
          modules: [Navigation],
