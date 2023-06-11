@@ -117,8 +117,13 @@
    background-color: #262f5c;
    @include adaptiveValue("padding-top", 70, 35);
    @include adaptiveValue("padding-bottom", 70, 35);
+   @include adaptiveValue("padding-left", 27, 20);
+   @include adaptiveValue("padding-right", 27, 20);
    // .layouts__container
    &__container {
+      @media (max-width: $mobile) {
+         padding: 0;
+      }
    }
    // .layouts__inner
    &__inner {
@@ -127,8 +132,8 @@
    &__row {
       display: flex;
       align-items: center;
-      @media (max-width:$mobile){
-         flex-direction: column; 
+      @media (max-width: $mobile) {
+         flex-direction: column;
       }
    }
    // .layouts__content
@@ -136,10 +141,13 @@
       flex: 0 1 50%;
       @include adaptiveValue("padding-top", 57, 30);
       @include adaptiveValue("padding-bottom", 57, 30);
-      @media (max-width:$mobile){
+      @media (max-width: $mobile) {
          max-width: rem(570);
+         flex: 0 1 100%;
          text-align: center;
-         &:not(:last-child) {margin-bottom: rem(30);}
+         &:not(:last-child) {
+            margin-bottom: rem(30);
+         }
       }
    }
    // .layouts__subtitle
@@ -150,16 +158,20 @@
       color: #ffffff;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      &:not(:last-child) {margin-bottom: rem(25);}
+      &:not(:last-child) {
+         margin-bottom: rem(25);
+      }
    }
    // .layouts__title
    &__title {
-      &:not(:last-child) {margin-bottom: rem(25);}
+      &:not(:last-child) {
+         margin-bottom: rem(25);
+      }
       span {
          color: rgba(241, 32, 82, 1);
       }
-      @media (max-width:$mobile){
-         font-size: rem(46);
+      @media (max-width: $mobile) {
+         line-height: 130%; /* 16/12 */
       }
    }
    // .layouts__text
@@ -167,6 +179,10 @@
       font-size: rem(20);
       line-height: 150%; /* 30/20 */
       color: #ffffff;
+      @media (max-width: $mobile) {
+         font-size: rem(18);
+         line-height: 144%; /* 26/18 */
+      }
    }
    // .layouts__image
    &__image {
