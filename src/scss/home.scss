@@ -20,6 +20,9 @@
    // .dark-section__layouts
    &__layouts {
    }
+   // .dark-section__analytics
+   &__analytics {
+   }
 }
 
 //==== finish ================================================================================================
@@ -66,6 +69,9 @@
    }
    // .customers__image
    &__image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: rem(52);
       height: rem(52);
       img {
@@ -114,7 +120,7 @@
 //==== finish fuature ================================================================================================
 //==== start  ================================================================================================
 .layouts {
-   background-color: #262f5c;
+   // background-color: #262f5c;
    @include adaptiveValue("padding-top", 70, 35);
    @include adaptiveValue("padding-bottom", 70, 35);
    @include adaptiveValue("padding-left", 27, 20);
@@ -190,10 +196,148 @@
       text-align: right;
    }
 }
-
 //==== finish ================================================================================================
 //====================================================================================================
 //==== start  ================================================================================================
+.analytics {
+   background-color: #043215;
+   @include adaptiveValue("padding-top", 70, 35);
+   @include adaptiveValue("padding-bottom", 70, 35);
+   @include adaptiveValue("padding-left", 27, 20);
+   @include adaptiveValue("padding-right", 27, 20);
+   // .layouts__container
+   &__container {
+      @media (max-width: $mobile) {
+         padding: 0;
+      }
+   }
+   // .layouts__inner
+   &__inner {
+   }
+   // .layouts__row
+   &__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: rem(50);
+      @media (max-width: $mobile) {
+         display: block;
+      }
+   }
+   // .layouts__content
+   &__content {
+      flex: 0 1 42.7%;
+      @include adaptiveValue("padding-top", 57, 0);
+      @include adaptiveValue("padding-bottom", 57, 0);
+      max-width: rem(370);
+      // padding-right: rem(130);
+      @media (max-width: $mobile) {
+         flex: 0 1 100%;
+         text-align: left;
+         max-width: 100%;
+         &:not(:last-child) {
+            @include adaptiveValue(" margin-bottom", 25, 30);
+         }
+      }
+      @media (max-width: $mobileSmall) {
+         text-align: left;
+      }
+   }
+   // .analytics__subtitle
+   &__subtitle {
+      display: flex;
+      align-items: center;
+      gap: rem(16);
+      &:not(:last-child) {
+         @include adaptiveValue(" margin-bottom", 25, 20);
+      }
+   }
+   // .analytics__image
+   &__image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(36);
+      height: rem(36);
+      background-color: #f12052;
+      img {
+         width: rem(14);
+         height: rem(16);
+      }
+   }
+   // .analytics__name
+   &__name {
+      font-weight: 900;
+      font-size: rem(12);
+      line-height: 133%; /* 16/12 */
+      color: #ffffff;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      @media (max-width: $mobileSmall) {
+         text-align: left;
+      }
+   }
+   // .layouts__title
+   &__title {
+      font-weight: 900;
+      @include adaptiveValue("font-size", 36, 26, 2, 768, 375);
+      line-height: 128%; /* 16/12 */
+      color: #ffffff;
+      &:not(:last-child) {
+         @include adaptiveValue(" margin-bottom", 25, 20);
+      }
+      span {
+         color: rgba(241, 32, 82, 1);
+      }
+      @media (max-width: $mobileSmall) {
+         line-height: 130%; /* 16/12 */
+         line-height: 155%;
+         text-align: left;
+      }
+   }
+   // .layouts__text
+   &__text {
+      font-size: rem(16);
+      line-height: 150%; /* 24/16 */
+      color: #ffffff;
+      @media (max-width: $mobile) {
+         font-size: rem(18);
+         line-height: 144%; /* 26/18 */
+      }
+   }
+   // .layouts__image
+   &__image-ibg {
+      flex: 0 1 57.3%;
+      // padding-top: 34.5%;
+      padding-bottom: 53%;
+      position: relative;
+      filter: drop-shadow(-16px -16px 0px rgba(0, 0, 0, 0.5)) drop-shadow(20px 20px 100px rgba(0, 0, 0, 0.4))
+         drop-shadow(16px 16px 0px rgba(0, 0, 0, 0.5));
+      img {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0%;
+         object-fit: cover;
+      }
+      @media (max-width: $mobile) {
+         flex: 0 1 100%;
+      }
+   }
+}
+
+.analytics {
+   // .analytics__subtitle
+   &__subtitle {
+   }
+   // .analytics__image
+   &__image {
+   }
+   // .analytics__name
+   &__name {
+   }
+}
 
 //==== finish ================================================================================================
 //==== start  ================================================================================================
@@ -211,7 +355,9 @@
 .resources-page {
    position: relative;
    background: #fef4fe;
-   padding: rem(148) 0 rem(130) 0;
+   // padding: rem(148) 0 rem(130) 0;
+   @include adaptiveValue("padding-top", 70, 35);
+   @include adaptiveValue("padding-bottom", 70, 35);
    @media (max-width: $mobile) {
       padding: rem(128) 0 rem(60) 0;
    }
