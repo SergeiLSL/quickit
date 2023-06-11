@@ -9,7 +9,7 @@ button {
    &_blue {
       background-color: #205bf1;
       &:hover {
-         background-color: #0036C2;
+         background-color: #0036c2;
       }
    }
    &_white-1-filled-button {
@@ -29,11 +29,79 @@ button {
    }
 }
 
-input {   
+input {
    background: rgba(31, 32, 37, 0.03);
    border: 1px solid rgba(31, 32, 37, 0.1);
    font-size: rem(16);
    line-height: 150%; /* 24/16 */
-   color: #1F2025;
+   color: #1f2025;
    opacity: 0.5;
 }
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.title {
+   font-weight: 900;
+   font-size: rem(46);
+   @include adaptiveValue("font-size", 46, 32);
+   line-height: 119.56%; /* 55/46 */
+   color: #FFFFFF;
+}
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.arrow {
+   cursor: pointer;
+
+   position: relative;
+   width: rem(25);
+   // @include adaptiveValue("width", 75, 40, 2, 1440, 992);
+   height: rem(20);
+}
+.arrow div {
+   position: relative;
+   top: rem(8);
+   width: rem(16);
+   height: rem(2);
+   background-color: #205bf1;
+   // box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+   right: 0;
+   display: block;
+   @media (max-width: $tablet) {
+      // width: rem(112);
+      // @include adaptiveValue("width", 112, 75);
+   }
+}
+.arrow div::after {
+   content: "";
+   position: absolute;
+   width: rem(8);
+   height: rem(2);
+   top: rem(-3);
+   right: rem(-0.5);
+   background-color: #205bf1;
+   transform: rotate(45deg);
+}
+.arrow div::before {
+   content: "";
+   position: absolute;
+   width: rem(8);
+   height: rem(2);
+   top: rem(3);
+   right: rem(-.5);
+   background-color: #205bf1;
+   // box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+   transform: rotate(-45deg);
+}
+.arrow:hover {
+   animation: arrow 1s linear infinite;
+}
+@keyframes arrow {
+   0% {
+      left: 0;
+   }
+   50% {
+      left: rem(8);
+   }
+   100% {
+      left: 0;
+   }
+}
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++

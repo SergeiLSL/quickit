@@ -1,15 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"Quickit"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+@@include('html/_head.htm',{
+"title":"Quickit"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+
+         <section class="page__resources resources-page">
+            <div class="resources-page__inner">
+               <div class="resources-page__container">
+                  <div class="resources-page__top">
+                     <h2 class="resources-page__title title">
+                        Read our resources
+                     </h2>
+                     <div class="resources-page__view-resources">
+                        <div class="resources-page__text">
+                           View Resources
+                        </div>
+                        <div class="resources-page__arrow arrow">
+                           <div></div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Оболочка слайдера -->
+                  <div class="resources-page__slider swiper">
+                     <!-- движущаяся часть слайдера -->
+                     <div class="resources-page__wrapper swiper-wrapper">
+                        <!-- Слайд -->
+                        <div class="resources-page__slide swiper-slide">
+                           <a href="#" class="resources-page__item item-resources">
+                              <div class="item-resources__resource">
+                                 <div class="item-resources__image-ibg">
+                                    <img src="@img/white-section/resources/image-01.jpg" alt="Image">
+                                 </div>
+
+                                 <div class="item-resources__body">
+                                    <div class="item-resources__chapter">Video</div>
+                                    <div class="item-resources__title">
+                                       Quickit: What you probably didn’t know
+                                    </div>
+                                    <div class="item-resources__link">
+                                       <div class="item-resources__text">
+                                          Watch Video
+                                       </div>
+                                       <div class="item-resources__arrow arrow">
+                                          <div></div>
+                                       </div>
+                                    </div>
+                                    <!--? ссылка в ссылке https://www.tune-it.ru/web/leksa/blog/-/blogs/1996233 -->
+                                 </div>
+                              </div>
+                           </a>
+                        </div>
+
+                        <div class="resources-page__slide swiper-slide">
+                           <a href="#" class="resources-page__item item-resources">
+                              <div class="item-resources__resource">
+                                 <div class="item-resources__image-ibg">
+                                    <img src="@img/white-section/resources/image-02.jpg" alt="Image">
+                                 </div>
+
+                                 <div class="item-resources__body">
+                                    <div class="item-resources__chapter">Article</div>
+                                    <div class="item-resources__title">
+                                       The guide to product analytics
+                                    </div>
+                                    <div class="item-resources__link">
+                                       <div class="item-resources__text">
+                                          Read Article
+                                       </div>
+                                       <div class="item-resources__arrow arrow">
+                                          <div></div>
+                                       </div>
+                                    </div>
+                                    <!--? ссылка в ссылке https://www.tune-it.ru/web/leksa/blog/-/blogs/1996233 -->
+                                 </div>
+                              </div>
+                           </a>
+                        </div>
+
+                        <div class="resources-page__slide swiper-slide">
+                           <a href="#" class="resources-page__item item-resources">
+                              <div class="item-resources__resource">
+                                 <div class="item-resources__image-ibg">
+                                    <img src="@img/white-section/resources/image-03.jpg" alt="Image">
+                                 </div>
+
+                                 <div class="item-resources__body">
+                                    <div class="item-resources__chapter">Blog</div>
+                                    <div class="item-resources__title">
+                                       Using data for successful decision making
+                                    </div>
+                                    <div class="item-resources__link">
+                                       <div class="item-resources__text">
+                                          Read Post
+                                       </div>
+                                       <div class="item-resources__arrow arrow">
+                                          <div></div>
+                                       </div>
+                                    </div>
+                                    <!--? ссылка в ссылке https://www.tune-it.ru/web/leksa/blog/-/blogs/1996233 -->
+                                 </div>
+                              </div>
+                           </a>
+                        </div>
+
+                        <div class="resources-page__slide swiper-slide">
+                           <a href="#" class="resources-page__item item-resources">
+                              <div class="item-resources__resource">
+                                 <div class="item-resources__image-ibg">
+                                    <img src="@img/white-section/resources/image-01.jpg" alt="Image">
+                                 </div>
+
+                                 <div class="item-resources__body">
+                                    <div class="item-resources__chapter">Video</div>
+                                    <div class="item-resources__title">
+                                       Quickit: What you probably didn’t know
+                                    </div>
+                                    <div class="item-resources__link">
+                                       <div class="item-resources__text">
+                                          Watch Video
+                                       </div>
+                                       <div class="item-resources__arrow arrow">
+                                          <div></div>
+                                       </div>
+                                    </div>
+                                    <!--? ссылка в ссылке https://www.tune-it.ru/web/leksa/blog/-/blogs/1996233 -->
+                                 </div>
+                              </div>
+                           </a>
+                        </div>
+
+                        <div class="resources-page__slide swiper-slide">
+                           <a href="#" class="resources-page__item item-resources">
+                              <div class="item-resources__resource">
+                                 <div class="item-resources__image-ibg">
+                                    <img src="@img/white-section/resources/image-02.jpg" alt="Image">
+                                 </div>
+
+                                 <div class="item-resources__body">
+                                    <div class="item-resources__chapter">Article</div>
+                                    <div class="item-resources__title">
+                                       The guide to product analytics
+                                    </div>
+                                    <div class="item-resources__link">
+                                       <div class="item-resources__text">
+                                          Read Article
+                                       </div>
+                                       <div class="item-resources__arrow arrow">
+                                          <div></div>
+                                       </div>
+                                    </div>
+                                    <!--? ссылка в ссылке https://www.tune-it.ru/web/leksa/blog/-/blogs/1996233 -->
+                                 </div>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+                     <!-- Пагинация -->
+                     <!-- <div class="resources-page__swiper-pagination swiper-pagination"></div> -->
+                  </div>
+               </div>
+            </div>
+            <div class="resources-page__swiper-pagination swiper-pagination"></div>
+         </section>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_js.htm',{})
+</body>
+
 </html>
