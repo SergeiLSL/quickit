@@ -23,6 +23,9 @@
    // .dark-section__analytics
    &__analytics {
    }
+   // .dark-section__benefits
+   &__benefits {
+   }
 }
 
 //==== finish ================================================================================================
@@ -338,13 +341,146 @@
    &__name {
    }
 }
-
 //==== finish ================================================================================================
 //==== start  ================================================================================================
+.benefits {
+   background-color: #262f5c;
+   @include adaptiveValue("padding-top", 70, 35);
+   @include adaptiveValue("padding-bottom", 70, 35);
+   // .benefits__container
+   &__container {
+   }
+   // .benefits__inner
+   &__inner {
+   }
+   // .benefits__subtitle
+   &__subtitle {
+      font-weight: 900;
+      font-size: rem(12);
+      line-height: 133%; /* 16/12 */
+      color: #ffffff;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      &:not(:last-child) {
+         margin-bottom: rem(25);
+      }
+   }
+   // .benefits__title
+   &__title {
+      max-width: rem(570);
+      span {
+         color: #205bf1;
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(40);
+      }
+   }
+   // .benefits__row
+   &__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+   // .benefits__image
+   &__image {
+      flex: 0 1 50%;
+   }
+   // .benefits__content
+   &__content {
+      flex: 0 1 50%;
+      max-width: rem(470);
+      justify-content: end;
+   }
+   // .benefits__menu
+   &__menu {
+   }
+}
+
+.menu {
+   // .menu__list
+   &__list {
+   }
+   // .menu__item
+   &__item {
+      position: relative;
+      padding: rem(10) rem(30);
+      transition: all 2s;
+      &:not(:last-child) {
+         margin-bottom: rem(30);
+      }
+      &:hover,
+      &:active {
+         color: #fff;
+         .menu__text {
+            // opacity: 1;
+         }
+      }
+   }
+   // .menu__link
+   &__link {
+      &::after {
+         position: absolute;
+         content: "";
+         height: 100%;
+         width: rem(2);
+         background-color: #ffffff;
+         opacity: 0.2;
+         top: 0;
+         left: 0%;
+         transition: all 0.5s;
+      }
+      &:hover::after {
+         background-color: #205bf1;
+         opacity: 1;
+         height: 100%;
+      }
+   }
+   // .menu__title
+   &__title {
+      font-weight: 900;
+      font-size: rem(20);
+      line-height: 150%; /* 30/20 */
+      color: #ffffff;
+      &:not(:last-child) {
+         margin-bottom: rem(15);
+      }
+   }
+   // .menu__text
+   &__text {
+      font-size: rem(16);
+      line-height: 150%; /* 24/16 */
+      color: #ffffff;
+      opacity: 0.7;
+      transition: all 0.5s ease 0s;
+      &:hover {
+         opacity: 1;
+      }
+   }
+   // .menu__active
+   &__active {
+      // background-color: #265c2d;
+      // position: absolute;
+      // bottom: 0;
+      // left: 0;
+      // width: 8px;
+      // height: 100%;
+      // span {
+      //    position: absolute;
+      //    width: 100%;
+      //    height: 100%;
+      //    top: 0;
+      //    left: 0;
+      //    transition: all 0.5s ease 0s;
+      //    border-radius: 0 5px 5px 0;
+      // }
+   }
+}
 
 //==== finish ================================================================================================
 //====================================================================================================
 //==== start  ================================================================================================
+
+/* --------------------------- */
 
 //==== finish ================================================================================================
 //==== start  ================================================================================================
@@ -354,7 +490,7 @@
 
 .resources-page {
    position: relative;
-   background: #fef4fe;
+   background: #ffffff;
    // padding: rem(148) 0 rem(130) 0;
    @include adaptiveValue("padding-top", 70, 35);
    @include adaptiveValue("padding-bottom", 70, 35);
