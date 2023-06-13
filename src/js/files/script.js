@@ -37,9 +37,9 @@ new Swiper('.swiper', {
       375: {
          slidesPerView: 1,
          spaceBetween: 30,
-         grid: {
-            rows: 2,
-         },
+         // grid: {
+         //    rows: 2,
+         // },
       },
       480: {
          slidesPerView: 1,

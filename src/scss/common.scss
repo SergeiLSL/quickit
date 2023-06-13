@@ -49,7 +49,6 @@ input {
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .arrow {
    cursor: pointer;
-
    position: relative;
    width: rem(25);
    // @include adaptiveValue("width", 75, 40, 2, 1440, 992);
