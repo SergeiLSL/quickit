@@ -26,6 +26,9 @@
    // .dark-section__benefits
    &__benefits {
    }
+   // .dark-section__cta
+   &__cta {
+   }
 }
 
 //==== finish ================================================================================================
@@ -336,7 +339,7 @@
    @include adaptiveValue("padding-top", 70, 35);
    @include adaptiveValue("padding-bottom", 70, 35);
    @include adaptiveValue("padding-left", 27, 0);
-   @include adaptiveValue("padding-right", 27, 0);   
+   @include adaptiveValue("padding-right", 27, 0);
    // .benefits__container
    &__container {
    }
@@ -382,7 +385,7 @@
       img {
          max-width: 100%;
       }
-      @media (max-width:$mobile){
+      @media (max-width: $mobile) {
          flex: 0 1 100%;
       }
    }
@@ -391,8 +394,8 @@
       flex: 0 1 rem(470);
       // max-width: rem(470);
       justify-content: end;
-      @media (max-width:$mobile){
-         max-width: 100%; 
+      @media (max-width: $mobile) {
+         max-width: 100%;
          margin-bottom: rem(30);
       }
    }
@@ -418,9 +421,9 @@
       &:active {
          color: #fff;
       }
-      @media (max-width:$mobile){
-         padding: rem(10) rem(20); 
-         @include adaptiveValue("padding-right", 20, 5);  
+      @media (max-width: $mobile) {
+         padding: rem(10) rem(20);
+         @include adaptiveValue("padding-right", 20, 5);
       }
    }
    // .menu__link
@@ -483,14 +486,97 @@
       // }
    }
 }
-
 //==== finish ================================================================================================
 //====================================================================================================
-//==== start  ================================================================================================
+//==== start cta ================================================================================================
+.cta {
+   background-color: #265c49;
+   @include adaptiveValue("padding-top", 70, 30);
+   @include adaptiveValue("padding-bottom", 70, 30);
+   @include adaptiveValue("padding-left", 27, 0);
+   @include adaptiveValue("padding-right", 27, 0);
+   // .cta__container
+   &__container {
+   }
+   // .cta__cta-subscript
+   &__cta-subscript {
+   }
+}
 
-/* --------------------------- */
+.cta-subscript {
+   // .cta-subscript__wrapper
+   &__wrapper {
+   }
+   // .cta-subscript__slide
+   &__slide {
+      background: rgba(255, 255, 255, 0.1);
+   }
+   // .cta-subscript__content
+   &__content {
+      max-width: rem(470);
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      gap: rem(40);
+      @include adaptiveValue("padding-top", 140, 120, 2, 1170, 768);
+      @include adaptiveValue("padding-bottom", 140, 120, 2, 1170, 768);
+      @media (max-width: $mobile) {
+         padding: rem(0) rem(30);
+         @include adaptiveValue("padding-top", 120, 60, 2, 768, 375);
+         @include adaptiveValue("padding-bottom", 120, 60, 2, 768, 375);
+         gap: rem(30);
+      }
+   }
+   // .cta-subscript__title
+   &__title {
+      @media (max-width: $mobile) {
+         line-height: 130%;
+      }
+   }
+   // .cta-subscript__text
+   &__text {
+      font-size: rem(16);
+      line-height: 150%; /* 24/16 */
+      color: #ffffff;
+      &:not(:last-child) {
+         // margin-bottom: rem(40);
+      }
+   }
+   // .cta-subscript__buttons
+   &__buttons {
+   }
+   // .cta-subscript__button
+   &__button {
+      padding: rem(10) rem(15);
+      box-shadow: 0px 5px 15px rgba(32, 91, 241, 0.2);
+      font-weight: 700;
+      font-size: rem(16);
+      line-height: 150%; /* 24/16 */
+      color: #ffffff;
+      background-color: #205bf1;
+      &:hover {
+         background-color: #0036c2;
+      }
+   }
+}
 
-//==== finish ================================================================================================
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.title {
+}
+.button {
+}
+.swiper-pagination {
+}
+
+//==== finish cta ================================================================================================
 //==== start  ================================================================================================
 
 //==== finish ================================================================================================
